@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>JSF Login Page</title>
+</h:head>
+<body>
+	<center>
+		<h:form>
+			First Name: <h:inputText value="#{user.firstName}" title="" /><br/> <!-- User Class in Managed Bean -->
+			Last Name: <h:inputText value="#{user.lastName}" title="" /><br/>   <!-- User Class in Managed Bean -->
+			<h:commandButton action="#{formController.onSubmit()}" value="Submit 1" /> <!-- Must look up managed bean first -->
+			<h:commandButton action="#{formController.onSubmit(user)}" value="Submit 2" /> <!-- Already using the managed bean -->
+			<h:commandButton action="#{formController.onFlash(user)}" value="Flash" />		<!-- Temporary object using managed bean -->
+		</h:form>
+	</center>
+</body>
+
+
+
+
+
+	
+	
+	
+</html>
